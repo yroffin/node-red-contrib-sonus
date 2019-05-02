@@ -1,0 +1,36 @@
+{
+    "name": "node-red-contrib-sonus",
+    "version": "0.0.1",
+    "description": "A Node-RED node for runing sonus lib.",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:yroffin/node-red-contrib-sonus.git"
+    },
+    "keywords": [
+        "node-red",
+        "stt",
+        "sonus",
+        "lisa"
+    ],
+    "author": {
+        "name": "Yannick Roffin",
+        "email": "yroffin@gmail.com",
+        "url": "https://github.com/yroffin"
+    },
+    "contributors": [
+        {}
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yroffin/node-red-contrib-sonus/issues"
+    },
+    "node-red": {
+        "nodes": {
+            "ssh-client": "src/sonus-client.js"
+        }
+    },
+    "dependencies": {
+        "sonus": "1.0.1"
+    },
+    "homepage": "https://github.com/yroffin/node-red-contrib-sonus"
+}

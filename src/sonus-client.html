@@ -1,0 +1,84 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sonus-client', {
+        category: 'input',
+        defaults: {
+            debug: { value: false },
+            langage: { value: "" },
+            program: { value: "" },
+            arecord: { value: "" },
+            hotword: { value: "" },
+            model: { value: "" },
+            name: { value: "" },
+        },
+        credentials: {
+            userdata: { type: "text" },
+            key: { type: "password" }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "www.png",
+        label: function () {
+            return this.name || "sonus client";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sonus-client">
+    <div class="form-row">
+            <label for="node-input-debug"><i class="fa fa-server"></i> Debug</label>
+            <input type="checkbox" id="node-input-debug" placeholder="">
+        </div>
+        <div class="form-row">
+            <label for="node-input-userdata"><i class="fa fa-user-circle-o"></i> User data</label>
+            <input type="text" id="node-input-userdata" placeholder="User data ...">
+        </div>
+        <div class="form-row">
+            <label for="node-input-key"><i class="fa fa-user-secret"></i> Key</label>
+            <textarea id="node-input-key" placeholder="Key"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+            <input type="text" id="node-input-name" placeholder="Name">
+        </div>
+        <div class="form-row">
+            <label for="node-input-hotword"><i class="icon-tag"></i> Hotword</label>
+            <input type="text" id="node-input-hotword" placeholder="jarvis">
+        </div>
+        <div class="form-row">
+            <label for="node-input-model"><i class="icon-tag"></i> Model file</label>
+            <input type="text" id="node-input-model" placeholder="/tmp/resources/jarvis.pmdl">
+        </div>
+        <div class="form-row">
+            <label for="node-input-langage"><i class="icon-tag"></i> Langage</label>
+            <select id="node-input-langage">
+                <option value="valueEnUS">en-US</option>
+                <option value="valueFrFR">fr-FR</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="node-input-program"><i class="icon-tag"></i> Type</label>
+            <select id="node-input-program">
+                <option value="valueRec">rec</option>
+                <option value="valueSox">sox</option>
+                <option value="valueArc">arecord</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="node-input-arecord"><i class="icon-tag"></i> Arecord</label>
+            <input type="text" id="node-input-arecord" placeholder="hw:1,0">
+        </div>
+</script>
+
+<script type="text/x-red" data-help-name="sonus-client">
+    <p>A simple node that handle sonus client</p>
+
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+        <li>Default
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">string</span></dt>
+                <dd>the text from speech.</dd>
+            </dl>
+        </li>
+    </ol>
+</script>
