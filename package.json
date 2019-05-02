@@ -31,7 +31,9 @@
     },
     "dependencies": {
         "sonus": "1.0.1",
-        "cryptiles": ">=4.1.2"
+        "tar": ">=4.4.2",
+        "cryptiles": ">=4.1.2",
+        "hoek": ">=4.2.1"
     },
     "homepage": "https://github.com/yroffin/node-red-contrib-sonus"
 }
